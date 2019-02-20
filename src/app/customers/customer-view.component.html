@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-4" *ngFor="let card of customerView">
+      <div class="card border-primary m-4" >
+        <div class="card-header bg-primary">
+          {{card.name}} <i class="fas fa-user-edit float-right" routerLink="editCustomerDetails"></i>
+        </div>
+        <div class="card-body">
+          <div class="row"> 
+              <div class="col-sm-4">
+                  <img src={{imgPath}} class="img-fluid">
+              </div>
+              <div class="col-sm-8">
+                  <p>{{card.location}},</p>
+                  <p>{{card.state}},</p>
+                  <a>View Orders</a>
+              </div>
+          </div>
+        
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Customers</h1>
+  <div class="row">
+    <div class="col-sm-12 sub-nav">
+      <a (click)="loadCustomerCardView()"><i class="fas fa-th"></i>Card-View</a>
+      <a (click)="loadCustomerGridView()"><i class="fas fa-list-ul"></i>List-View</a>
+      <a (click)="loadCustomerMap()"><i class="fas fa-map-marker-alt"></i>Map-View</a>
+      <a (click)="loadCustomerNewCustomer()"><i class="fas fa-plus"></i>New-Customer</a>
+    </div>
+
+    <div *ngIf=cardViewStatus>
+      <customer-view></customer-view>
+    </div>
+    <div *ngIf="gridViewStatus">
+      <customer-grid></customer-grid>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
